@@ -1,6 +1,9 @@
-package com.example.RestApiDemo;
+package com.example.RestApi2;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 //import org.springframework.data.annotation.Id;
 @Entity
 @Table(name = "user")
@@ -41,19 +44,15 @@ public class User {
     public void setAge(int age) {
         this.age = age;
     }
-
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
-
     public void setId(long id) {
         this.id = id;
     }
-
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-
     public void setOccupation(String occupation) {
         this.occupation = occupation;
     }

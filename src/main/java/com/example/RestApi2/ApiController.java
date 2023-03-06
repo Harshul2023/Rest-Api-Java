@@ -1,4 +1,4 @@
-package com.example.RestApiDemo;
+package com.example.RestApi2;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -11,6 +11,11 @@ import java.util.Optional;
 public class ApiController {
     @Autowired
     private UserRepo userRepo;
+
+    @GetMapping(value = "/hy")
+    public String greet(){
+        return "HELLO GUYS";
+    }
     @GetMapping(value = "/read")
     public List<User> getUsers() {
         return userRepo.findAll();
